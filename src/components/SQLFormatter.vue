@@ -1,10 +1,18 @@
-<script setup lang="ts">
-import { computed, ref } from 'vue';
+<script lang="ts">
 import { format } from 'sql-formatter';
+import { defineComponent } from "vue";
 
-const sql = ref('');
+export default defineComponent({
+  data() {
+    return { sql: "" };
+  },
 
-const formattedSql = computed(() => format(sql.value));
+  computed: {
+    formattedSql(): string {
+      return format(this.sql);
+    }
+  }
+});
 </script>
 
 <template>
