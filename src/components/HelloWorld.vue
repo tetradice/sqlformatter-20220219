@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Counter from './Counter.vue';
+import SQLFormatter from './SQLFormatter.vue';
 
 defineProps<{ msg: string }>()
 </script>
@@ -28,6 +29,7 @@ defineProps<{ msg: string }>()
   <Counter />
   <Counter :initial="10" />
   <Counter :initial="100" />
+  <SQLFormatter />
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
