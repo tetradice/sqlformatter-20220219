@@ -1,8 +1,16 @@
-<script setup lang="ts">
-import { ref } from 'vue';
+<script lang="ts">
+import { defineComponent } from "vue";
 
-const props = defineProps<{ initial?: number }>()
-const count = ref(props.initial ?? 0)
+export default defineComponent({
+  props: {
+    initial: { type: Number, default: 0 }
+  },
+  data() {
+    return {
+      count: this.initial
+    }
+  }
+});
 </script>
 
 <template>
