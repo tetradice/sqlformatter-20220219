@@ -26,7 +26,8 @@ defineProps<{ msg: string }>()
   </p>
 
   <Counter />
-  <Counter />
+  <Counter :initial="10" />
+  <Counter :initial="100" />
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
