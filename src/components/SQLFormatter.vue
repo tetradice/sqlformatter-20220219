@@ -1,22 +1,32 @@
-<script lang="ts">
+<script setup lang="ts">
 import { format } from 'sql-formatter';
-import { defineComponent } from "vue";
+import { computed, ref } from 'vue';
 
-export default defineComponent({
-  data() {
-    return { sql: "" };
-  },
-
-  computed: {
-    formattedSql(): string {
-      return format(this.sql);
-    }
-  }
+const sql = ref("");
+const formattedSql = computed(() => {
+  return format(sql.value);
 });
 </script>
 
 <template>
-  <textarea v-model="sql" style="width: 80em; height: 10em;" />
-
-  <highlightjs language="sql" :code="formattedSql" style="text-align: left" />
+  <div class="container">
+    <textarea v-model="sql" class="sqlInput" />
+    <highlightjs language="sql" :code="formattedSql" class="sqlOutput" />
+  </div>
 </template>
+
+<style>
+
+.container {
+  width: 80em;
+  margin-left: 1em;
+}
+.sqlInput {
+  width: 100%;
+  height: 10em;
+}
+
+.sqlOutput {
+  text-align: left;
+}
+</style>

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
+    "@types/highlightjs": "^9.12.2",
     "sql-formatter": "^4.0.2",
     "vue": "^3.2.25"
   },
