@@ -23,7 +23,7 @@ const formattedSql = computed(() => {
 }
 .sqlInput {
   width: 100%;
-  height: 15em;
+  height: 18em;
 }
 
 .sqlOutput {
