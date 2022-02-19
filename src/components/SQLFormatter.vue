@@ -18,7 +18,7 @@ const formattedSql = computed(() => {
 <style>
 
 .container {
-  width: 80em;
+  width: 50em;
   margin-left: 1em;
 }
 .sqlInput {
