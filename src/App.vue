@@ -14,5 +14,8 @@ import SQLFormatter from './components/SQLFormatter.vue'
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+  width: 90%;
+  margin: auto;
+
 }
 </style>
